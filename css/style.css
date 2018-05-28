@@ -1,0 +1,26 @@
+body{
+    background-color: greenyellow;
+}
+h1{
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:20px 40px;
+    margin :0 20px;
+    }
+.item{
+    height: 30vh;
+    width: 20vw;
+    border:1px solid transparent;
+    background-color: white;
+    border-radius:5px;
+    text-align:center;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-evenly;
+}
+.img{
+height:12vh;
+}
