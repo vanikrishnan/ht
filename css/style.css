@@ -8,7 +8,7 @@ h1{
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap:20px 40px;
-    margin :0 20px;
+    margin :0 33px;
     }
 .item{
     height: 30vh;
