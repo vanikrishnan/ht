@@ -1,26 +1,64 @@
 body{
-    background-color: greenyellow;
+    background-color:#6AC5AC;
 }
 h1{
-    text-align: center;
+    position:relative;
+     text-align: center;
+-webkit-animation-name:ex;
+-webkit-animation-duration:1s;
+animation-name : ex;
+animation-duration : 2s;
+    }
+    
+    @-webkit-keyframes ex{
+0%{left:-50px; top:0px; }
+25%{left:0px; top:0px;}
 }
+
+
 .container{
-    display: grid;
+    display:grid;
     grid-template-columns: auto auto auto auto;
     grid-gap:20px 40px;
-    margin :0 33px;
+    margin :0 25px;
     }
 .item{
-    height: 30vh;
+    height: 40vh;
     width: 20vw;
     border:1px solid transparent;
     background-color: white;
     border-radius:5px;
-    text-align:center;
+    text-align: center;
     display: flex;
-    flex-direction:column;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content:space-evenly;
+    box-shadow:1px 1px solid white;
+    transition-duration: 1s;
+    transition-delay:1ms;
+    transition-timing-function: ease;
 }
-.img{
+@media only screen and (min-width:1200px)
+{
+    .container{
+        grid-template-columns : auto auto auto auto;
+    }
+}
+@media only screen and (max-width:996px)
+{
+    .container{
+        grid-template-columns : auto auto auto;
+    }
+}
+@media only screen and (max-width:768px)
+{
+    .container{
+        grid-template-columns : auto auto ;
+    }
+}
+
+.content{
 height:12vh;
+}
+.item:hover{
+    box-shadow:4px 4px #405751;
 }
