@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="https://gitcdn.xyz/repo/thesmart/jquery-scrollspy/0.1.3/scrollspy.js"></script>
     </head>
     <body>
         <h1>- We are learning -</h1>
@@ -228,9 +230,29 @@
                         </div>
             </div>
         </div>
-        <script src="js/wow.min.js"></script>
-        <script>
-        new WOW().init();
+        
+<script src="js/wow.min.js"></script>
+<script>
+                var $body = $('body');
+                var $box = $('.box');
+                $box.clone().appendTo($body);
+                WOW.prototype.addBox=function(element)
+                {
+                        this.boxes.push(element);
+                };
+                var wow=new WOW()
+                wow.init();
+                $('.wow').on('scrollSpy:exit',function()
+                {
+                        $(this).css(
+                                {
+                                        'visibility':'hidden',
+                                        'animation-name':'none'
+                                }
+                        ).removeClass('animated');
+                        wow.addBox(this);
+                }).scrollSpy();
         </script>
+
     </body>
 </html>
